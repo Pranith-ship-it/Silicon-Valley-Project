@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Make your appointment</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-app.js"></script> 
+        <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-firestore.js"></script> 
+        <script src="https://www.gstatic.com/firebasejs/live/3.1/firebase.js"></script>
+    </head>
+    <body>
+        <h4 style="color:whitesmoke;">Make your appointment</h4>
+        <h5>Enter your chlid's Name </h5>
+        <input type="text" id="child_name" class="form-control" placeholder="Child name">
+        <br>
+        <br>
+        <h5>Enter the Hospital's Name </h5>
+        <input type="text" id="Hospital_name" class="form-control" placeholder="Hospital name">
+        <br>
+        <br>
+        <h5>Enter your city's pin code </h5>
+        <input type="text" id="pin_code" class="form-control" placeholder="Pin Code">
+        <br>
+        <br>
+        <h5>Enter your state Name </h5>
+        <input type="text" id="State_name" class="form-control" placeholder="State name">
+        <br>
+        <br>
+        <h5>Enter your phone number </h5>
+        <input type="text" id="phone_no" class="form-control" placeholder="Phone number">
+        <br>
+        <br>
+        <button type="button" class="btn btn-sucess" onclick="send()">Send</button>
+        <script type="text/javascript">
+        function send(){
+            var firebaseConfiRg = {
+  apiKey: "AIzaSyBLDtKHyGgvVeYfGW6e3USOrDy-eyztRlQ",
+  authDomain: "make-your-appointment.firebaseapp.com",
+  projectId: "make-your-appointment",
+  storageBucket: "make-your-appointment.appspot.com",
+  messagingSenderId: "246837370626",
+  appId: "1:246837370626:web:d970a99d73db919e7cac1b",
+  measurementId: "G-5T470RZMV2"
+};
+firebase.initializeApp(firebaseConfig);
+            window.location= "Ok_screen.html";
+child_name=document.getElementById("child_name").value;
+  localStorage.setItem("child_name" , child_name);
+  Hospital_name=document.getElementById("Hospital_name").value;
+  localStorage.setItem("Hospital_name" ,Hospital_name );
+  Pin_code=document.getElementById("pin_code").value;
+  localStorage.setItem("pin_code" ,Pin_code );
+  State_Name=document.getElementById("State_name").value;
+  localStorage.setItem("State_name" ,  State_Name);
+  Phone_No=document.getElementById("phone_no").value;
+  localStorage.setItem("phone_no" , Phone_No);
+  
+
+        }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+body{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: xx-large;
+    background:green;
+
+}
+
+#child_name, #Hospital_name, #pin_code, #State_name, #phone_no{
+width: 180px;
+
+}
+
+
+.btn{
+    background-color: green;
+    color: whitesmoke;
+}
